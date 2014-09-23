@@ -4,7 +4,7 @@ define(['lodash', 'facade/ajax'], function(_, ajax) {
 
   function getCurrentUser(config) {
 
-    var url = config.url + '/CurrentUser/CurrentUser';
+    var url = config.url + '/api/CurrentUser';
 
     return ajax.getJSON({
       url: url,

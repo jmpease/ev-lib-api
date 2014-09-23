@@ -2,18 +2,19 @@ define(['lodash', 'facade/ajax'], function(_, ajax) {
 
   'use strict';
 
-  function getAppInfo(config) {
-    // Make the call to the server
-    // to get an info of Application Info
+  function getIdentityProviders(config) {
+
+    var url = config.url + '/api/IdentityProviders';
+
     return ajax.getJSON({
-      url: config.url + '/api/Info',
+      url: url,
       user: config.user,
       password: config.password
     });
   }
 
   return {
-    getAppInfo: getAppInfo
+    getIdentityProviders: getIdentityProviders
   };
 
 });

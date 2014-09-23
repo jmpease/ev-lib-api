@@ -15,9 +15,16 @@
   });
 
   var testModules = [
+    'test/api',
     'test/app-info',
     'test/content',
-    'test/current-user'
+    'test/shared-content',
+    'test/current-user',
+    'test/identity-providers',
+    'test/libraries',
+    'test/media-workflows',
+    'test/organizations',
+    'test/playlists'
   ];
 
   require(testModules, function() {

@@ -8,16 +8,12 @@ module.exports = function(grunt) {
       baseUrl: 'src',
       paths: {
         'jquery': '../bower_components/jquery/dist/jquery',
-        // 'jquery': '../bower_components/jquery/src',
-        // 'sizzle': '../bower_components/jquery/src/sizzle/dist/sizzle',
         'base64': '../bower_components/base64/base64',
         'lodash': '../bower_components/lodash/dist/lodash'
       },
       include: 'api',
       exclude: ['jquery'],
       name: '../bower_components/almond/almond',
-      // mainConfigFile: '<%= paths.build %>/js/main.js',
-      // include: ['main.js'],
       out: 'dist/ev-lib-api.js',
       wrap: {
         start: '<%= banner %>' + grunt.file.read('wrap/wrap.start'),
@@ -45,25 +41,6 @@ module.exports = function(grunt) {
     clean: {
       files: ['dist']
     },
-    // concat: {
-    //   options: {
-    //     banner: '<%= banner %>',
-    //     stripBanners: true
-    //   },
-    //   dist: {
-    //     src: ['bower_components/requirejs/require.js', '<%= concat.dist.dest %>'],
-    //     dest: 'dist/require.js'
-    //   },
-    // },
-    // uglify: {
-    //   options: {
-    //     banner: '<%= banner %>'
-    //   },
-    //   dist: {
-    //     src: '<%= concat.dist.dest %>',
-    //     dest: 'dist/require.min.js'
-    //   },
-    // },
     qunit: {
       all: {
         options: {
@@ -131,7 +108,6 @@ module.exports = function(grunt) {
         url: '<%= pkg.homepage %>',
         options: {
           paths: 'src',
-          // themedir: 'path/to/custom/theme/',
           outdir: 'docs'
         }
       }
@@ -148,7 +124,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-yuidoc');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'test', 'clean', 'requirejs:development', 'requirejs:production', 'yuidoc']);
+  grunt.registerTask('default', ['jshint', 'test', 'clean', 'requirejs', 'yuidoc']);
   grunt.registerTask('demo', ['connect:development']);
   grunt.registerTask('test', ['connect:test', 'qunit']);
 

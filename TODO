@@ -1,0 +1,8 @@
+- login
+- logout
+- upload?
+- app/api, app/simpleAPI?
+- Forms auth support
+- beef up demos
+- additional unit tests (w/ mocks?)
+- end user and api documentation
