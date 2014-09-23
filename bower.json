@@ -1,0 +1,13 @@
+{
+  "name": "ev-lib-api",
+  "dependencies": {
+    "jquery": ">= 1.8.0",
+    "lodash": "~2.4.1",
+    "base64": "~0.3.0"
+  },
+  "devDependencies": {
+    "qunit": "~1.15.0",
+    "requirejs": "~2.1.15",
+    "almond": "~0.3.0"
+  }
+}

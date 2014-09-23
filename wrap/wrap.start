@@ -1,0 +1,13 @@
+// UMD wrapper (https://github.com/umdjs/umd)
+;(function (root, factory) {
+  if (typeof define === 'function') {
+    // Need to require external deps here so they're available
+    define(['jquery'], factory);
+  } else if (typeof exports === 'object') {
+    module.exports = factory();
+  } else {
+    root.EV = root.EV || {};
+    root.EV.API = factory();
+  }
+}(this, function () {
+

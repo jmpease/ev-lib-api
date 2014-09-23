@@ -1,0 +1,13 @@
+{
+    "project": {
+        "name": "ev-lib-api",
+        "description": "Ensemble Video API wrapper library",
+        "version": "0.0.0",
+        "url": ""
+    },
+    "files": {},
+    "modules": {},
+    "classes": {},
+    "classitems": [],
+    "warnings": []
+}
